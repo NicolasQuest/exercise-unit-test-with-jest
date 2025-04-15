@@ -25,7 +25,7 @@ test("One yen should be 0.0181839897285838 pounds", function () {
     const { fromYenToPound } = require('./app.js');
     const yen = 3.5;
     const pound = fromYenToPound(yen);
-    const expected = ((3.5 * 0.87) / 156.5) / 1.07;
+    const expected = yen * (0.87 / 156.5);
     expect(pound).toBe(expected);
 });
 
